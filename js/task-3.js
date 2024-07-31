@@ -1,9 +1,10 @@
 function checkForSpam(message){
-    if (message.toLowerCase() === message.toUpperCase()) {
-        return message;
-    } else {
-        return message;
-    }
+  let lowerCaseMessage = message.toLowerCase();
+ 
+    if (lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')) {
+        return true;
+  } 
+  return false;
 }
 
 console.log(checkForSpam("Latest technology news")); // false
